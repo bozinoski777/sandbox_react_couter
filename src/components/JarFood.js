@@ -6,10 +6,18 @@ export class JarFood extends Component {
     this.state = {height: 10
     }
   }
-
-  allThings = () => {
-
-  }
+  moreMore = () => {
+    this.interval = setInterval(() => this.setState({ height: this.state.height + 1}), 1);
+  };
+  stopMore = () => {
+    clearInterval(this.interval);
+  };
+  lessLess = () => {
+    this.interval = setInterval(() => this.setState({ height: this.state.height - 1}), 1);
+  };
+  stopLess = () => {
+    clearInterval(this.interval);
+  };
 
   render() {
     const myStyle = {height: this.state.height + "px"};

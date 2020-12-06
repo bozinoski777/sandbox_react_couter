@@ -8,16 +8,25 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedFoods: [1,2,3]
+      selectedFoods: []
     }
   };
+  addOne = () => {
+    this.setState({
+       selectedFoods: [...this.state.selectedFoods, "bla"]
+    });
 
+  }
   render() {
     return (
       <div className="App">
         <div className="container mt-4 d-flex">
-
-          <Jar selectedFoods={this.state.selectedFoods}/>
+          <div>
+            <Palette addOne={this.addOne}/>
+          </div>
+          <div>
+            <Jar selectedFoods={this.state.selectedFoods}/>
+          </div>
         </div>
       </div>
     );

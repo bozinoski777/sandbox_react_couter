@@ -7,25 +7,14 @@ export class Palette extends Component {
       height: 0
     }
   }
-  moreMore = () => {
-    this.interval = setInterval(() => this.setState({ height: this.state.height + 1}), 1);
-  };
-  stopMore = () => {
-    clearInterval(this.interval);
-  };
-  lessLess = () => {
-    this.interval = setInterval(() => this.setState({ height: this.state.height - 1}), 1);
-  };
-  stopLess = () => {
-    clearInterval(this.interval);
-  };
+
   render() {
   const myStyle = {height: this.state.height + "px"};
     return (
       <div className="row">
         <div className="col-6" >
-          <button onMouseDown={this.lessLess} onMouseUp={this.stopLess}>LESS</button>
-          <button onMouseDown={this.moreMore} onMouseUp={this.stopMore}>MORE</button>
+          <button onMouseDown={this.props.lessLess} onClick={this.props.addOne} onMouseUp={this.props.stopLess}>LESS</button>
+          <button onMouseDown={this.props.moreMore} onClick={this.props.addOne} onMouseUp={this.props.stopMore}>MORE</button>
         </div>
         <div className="col-6">
           <div style={myStyle} className="filling container" ></div>
