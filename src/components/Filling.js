@@ -5,18 +5,14 @@ export class Filling extends Component {
     super(props);
     this.state = {
       height: 0
+    }
   }
-
-  }
-
-
   moreMore = () => {
     this.interval = setInterval(() => this.setState({ height: this.state.height + 1}), 1);
   };
   stopMore = () => {
     clearInterval(this.interval);
   };
-
   lessLess = () => {
     this.interval = setInterval(() => this.setState({ height: this.state.height - 1}), 1);
   };
@@ -27,15 +23,14 @@ export class Filling extends Component {
   const myStyle = {height: this.state.height + "px"};
     return (
       <div>
-        <button onMouseDown={this.moreMore} onMouseUp={this.stopMore}>MORE</button>
-        <button onMouseDown={this.lessLess} onMouseUp={this.stopLess}>LESS</button>
-        <div style={myStyle} className="filling container" ></div>
+          <button onMouseDown={this.lessLess} onMouseUp={this.stopLess}>LESS</button>
+          <button onMouseDown={this.moreMore} onMouseUp={this.stopMore}>MORE</button>
+        <div style={{display: 'flex'}}>
+          <div style={myStyle} className="filling container" ></div>
+        </div>
       </div>
     )
   };
-
-
-
 }
 
 export default Filling;
