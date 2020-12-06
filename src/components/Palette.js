@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export class Filling extends Component {
+export class Palette extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -22,10 +22,12 @@ export class Filling extends Component {
   render() {
   const myStyle = {height: this.state.height + "px"};
     return (
-      <div>
+      <div className="row">
+        <div className="col-6" >
           <button onMouseDown={this.lessLess} onMouseUp={this.stopLess}>LESS</button>
           <button onMouseDown={this.moreMore} onMouseUp={this.stopMore}>MORE</button>
-        <div style={{display: 'flex'}}>
+        </div>
+        <div className="col-6">
           <div style={myStyle} className="filling container" ></div>
         </div>
       </div>
@@ -33,4 +35,4 @@ export class Filling extends Component {
   };
 }
 
-export default Filling;
+export default Palette;

@@ -14,8 +14,6 @@ code {
 
 .filling {
   border: 1px solid black;
+  transform-origin: bottom;
 }
 
-.container {
-  margin: 200px;
-}
