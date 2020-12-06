@@ -3,19 +3,26 @@ import JarFood from './JarFood'
 
 
 export class Jar extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {height: 10
-    }
-  }
 
-  allThings = () => {
+  moreWore = () => {
+    this.refs.jarfood.moreSore();
+  };
 
-  }
+  stopWore = () => {
+    this.refs.jarfood.stopSore();
+  };
+
+  lessWess = () => {
+    this.refs.jarfood.lessSess();
+  };
+
+  stopWess = () => {
+    this.refs.jarfood.stopSess();
+  };
 
   render() {
     return this.props.selectedFoods.map((selectedFood) => (
-    <JarFood  />
+    <JarFood ref="jarfood"/>
     ));
   };
 }

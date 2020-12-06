@@ -12,9 +12,11 @@ export class Palette extends Component {
               {food4: "Mandeln"}]
     }
   }
+
+
   render() {
     return this.state.foods.map((food) => (
-      <Choice ChoiceTitle={Object.values(food)[0]} />
+      <Choice ChoiceTitle={Object.values(food)[0]} moreMore={this.props.moreMore} stopMore={this.props.stopMore} lessLess={this.props.lessLess} stopLess={this.props.stopLess} addOne={this.props.addOne}/>
     ));
   };
 }

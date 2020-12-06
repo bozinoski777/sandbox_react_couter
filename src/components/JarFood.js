@@ -3,19 +3,19 @@ import React, { Component } from 'react';
 export class JarFood extends Component {
   constructor(props) {
     super(props);
-    this.state = {height: 10
+    this.state = {height: 0
     }
   }
-  moreMore = () => {
+  moreSore = () => {
     this.interval = setInterval(() => this.setState({ height: this.state.height + 1}), 1);
   };
-  stopMore = () => {
+  stopSore = () => {
     clearInterval(this.interval);
   };
-  lessLess = () => {
+  lessSess = () => {
     this.interval = setInterval(() => this.setState({ height: this.state.height - 1}), 1);
   };
-  stopLess = () => {
+  stopSess = () => {
     clearInterval(this.interval);
   };
 
