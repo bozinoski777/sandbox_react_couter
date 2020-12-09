@@ -18,7 +18,7 @@ export class Palette extends Component {
 
   render() {
     return this.state.foods.map((food) => (
-      <Choice ChoiceImg={Object.values(food)[1]} ChoiceTitle={Object.values(food)[0]} moreMore={this.props.moreMore} stopMore={this.props.stopMore} lessLess={this.props.lessLess} stopLess={this.props.stopLess} addOne={this.props.addOne}/>
+      <Choice className="grid-item" ChoiceImg={Object.values(food)[1]} ChoiceTitle={Object.values(food)[0]} moreMore={this.props.moreMore} stopMore={this.props.stopMore} lessLess={this.props.lessLess} stopLess={this.props.stopLess} addOne={this.props.addOne}/>
     ));
   };
 }
