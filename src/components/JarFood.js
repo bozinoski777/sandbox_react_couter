@@ -20,9 +20,9 @@ export class JarFood extends Component {
   };
 
   render() {
-    const myStyle = {height: this.state.height + "px"};
+    // const myStyle = ;
     return (
-      <div style={myStyle} className="filling container" ></div>
+      <div style={{height: this.state.height + "px", backgroundImage: "url(" + this.props.selectedFoods + ")"}} className="filling container" ></div>
     )
   };
 }

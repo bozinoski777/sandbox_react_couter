@@ -22,7 +22,7 @@ export class Jar extends Component {
 
   render() {
     return this.props.selectedFoods.map((selectedFood) => (
-    <JarFood ref="jarfood"/>
+    <JarFood ref="jarfood" selectedFoods={selectedFood}/>
     ));
   };
 }
