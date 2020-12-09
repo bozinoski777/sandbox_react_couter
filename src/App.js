@@ -36,12 +36,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="container mt-4 d-flex">
-          <div>
-            <Palette addOne={this.addOne} moreMore={this.moreMore} stopMore={this.stopMore} lessLess={this.lessLess} stopLess={this.stopLess} />
+        <div className="container row mt-4">
+          <div className="col-6">
+            <div>
+              <Palette addOne={this.addOne} moreMore={this.moreMore} stopMore={this.stopMore} lessLess={this.lessLess} stopLess={this.stopLess} />
+            </div>
           </div>
-          <div>
-            <Jar selectedFoods={this.state.selectedFoods} ref="jar"/>
+          <div className="col-6">
+            <div>
+              <Jar selectedFoods={this.state.selectedFoods} ref="jar"/>
+            </div>
           </div>
         </div>
       </div>
