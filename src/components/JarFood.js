@@ -7,17 +7,18 @@ export class JarFood extends Component {
     }
   }
   moreSore = () => {
+    console.log(this.props.selectedFoods)
     this.interval = setInterval(() => this.setState({ height: this.state.height + 1}), 1);
   };
   stopSore = () => {
     clearInterval(this.interval);
   };
-  lessSess = () => {
-    this.interval = setInterval(() => this.setState({ height: this.state.height - 1}), 1);
-  };
-  stopSess = () => {
-    clearInterval(this.interval);
-  };
+  // lessSess = () => {
+  //   this.interval = setInterval(() => this.setState({ height: this.state.height - 1}), 1);
+  // };
+  // stopSess = () => {
+  //   clearInterval(this.interval);
+  // };
 
   render() {
     // const myStyle = ;

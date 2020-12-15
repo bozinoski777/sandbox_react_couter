@@ -16,8 +16,8 @@ export class Palette extends Component {
               ChoiceTitle={food.foodName}
               moreMore={this.props.moreMore}
               stopMore={this.props.stopMore}
-              lessLess={this.props.lessLess}
-              stopLess={this.props.stopLess}
+              // lessLess={this.props.lessLess}
+              // stopLess={this.props.stopLess}
               addOne={this.props.addOne}/>
     ));
   };

@@ -16,9 +16,9 @@ export class Choice extends Component {
         <img onMouseDown={this.props.moreMore} onClick={this.props.addOne.bind(this)}
         onMouseUp={this.props.stopMore} src={this.props.ChoiceImg}
         style={{width: '200px', height: "200px", objectFit: 'cover'}} alt="" />
-        <button style={{position: 'absolute', left: '157px', top: '25px'}}
+       {/* <button style={{position: 'absolute', left: '157px', top: '25px'}}
                 onMouseDown={this.props.lessLess} onClick={this.props.addOne}
-                onMouseUp={this.props.stopLess}>LESS</button>
+                onMouseUp={this.props.stopLess}>LESS</button>*/}
       </div>
     )
   };

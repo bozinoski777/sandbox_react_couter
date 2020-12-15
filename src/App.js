@@ -16,53 +16,45 @@ class App extends Component {
               {foodName: "Lainsaamen", foodImg: "https://res.cloudinary.com/dj9iphc8u/image/upload/v1607507363/SmoothieJar/Org_L_awwavh.jpg"}]
     }
   };
+
   addOne = (e) => {
     this.setState({
        selectedFoods: [...this.state.selectedFoods, e.target.currentSrc]
     });
 
   };
-
   moreMore = () => {
-    if (this.state.selectedFoods === []) {
-    } else {
       this.refs.jar.moreWore();
-    }
   };
 
   stopMore = () => {
-    if (this.state.selectedFoods === []) {
-    } else {
       this.refs.jar.stopWore();
-    }
   };
 
-  lessLess = () => {
-    if (this.state.selectedFoods === []) {
-    } else {
-      this.refs.jar.lessWess();
-    }
-  };
+  // lessLess = () => {
+  //   if (this.state.selectedFoods === []) {
+  //   } else {
+  //     this.refs.jar.lessWess();
+  //   }
+  // };
 
-  stopLess = () => {
-    if (this.state.selectedFoods === []) {
-    } else {
-      this.refs.jar.stopWess();
-    }
-  };
+  // stopLess = () => {
+  //   if (this.state.selectedFoods === []) {
+  //   } else {
+  //     this.refs.jar.stopWess();
+  //   }
+  // };
 
   render() {
     return (
       <div className="container App">
         <div className="row mt-4">
           <div className="grid-container">
-            <Palette ChoiceImg={Object.values[1]}
-                     ChoiceTitle={Object.values[0]}
-                     addOne={this.addOne.bind(this)}
+            <Palette addOne={this.addOne.bind(this)}
                      moreMore={this.moreMore}
                      stopMore={this.stopMore}
-                     lessLess={this.lessLess}
-                     stopLess={this.stopLess}
+                     // lessLess={this.lessLess}
+                     // stopLess={this.stopLess}
                      foods={this.state.foods}/>
           </div>
           <div className="col-6">
