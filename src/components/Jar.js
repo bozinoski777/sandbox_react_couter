@@ -4,20 +4,19 @@ import JarFood from './JarFood'
 
 export class Jar extends Component {
 
-  moreWore = () => {
-    if (this.props.selectedFoods === []) {
-      return "banana"
-    } else {
-      this.refs.jarfood.moreSore();
+  constructor(props) {
+    super(props);
+    this.state = {
+      foodSelection: [{id: 0, quantity: 0, foodImg: "https://res.cloudinary.com/dj9iphc8u/image/upload/v1607507350/SmoothieJar/Org_N_ejcdac.jpg"}]
     }
   };
-
-  stopWore = () => {
-    if (this.props.selectedFoods === []) {
-         return "banana"
-    } else {
-      this.refs.jarfood.stopSore();
-    }
+//GIVE EVERY SELECTED FOOD AN ID !!!
+  moreSore = () => {
+    console.log(this.props.selectedFoods)
+    this.interval = setInterval(() => this.setState({ quantity: this.state.quantity + 1}), 1);
+  };
+  stopSore = () => {
+    clearInterval(this.interval);
   };
 
   // lessWess = () => {
@@ -29,13 +28,10 @@ export class Jar extends Component {
   // };
 
   render() {
-    if (this.props.selectedFoods === []) {
-      return "Choose an ingredient!"
-    } else {
     return this.props.selectedFoods.map((selectedFood) => (
     <JarFood ref="jarfood" selectedFoods={selectedFood}/>
     ));
-  }};
+  };
 }
 
 export default Jar;

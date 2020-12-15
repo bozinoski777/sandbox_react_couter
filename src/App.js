@@ -24,11 +24,11 @@ class App extends Component {
 
   };
   moreMore = () => {
-      this.refs.jar.moreWore();
+      this.refs.jar.moreSore();
   };
 
   stopMore = () => {
-      this.refs.jar.stopWore();
+      this.refs.jar.stopSore();
   };
 
   // lessLess = () => {
